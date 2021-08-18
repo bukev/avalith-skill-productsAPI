@@ -8,7 +8,7 @@ function App() {
   const [productList, setProductList] = useState([])
 
   useEffect(() => {
-    fetch('https://fakestoreapi.com/products?limit=4')
+    fetch('https://fakestoreapi.com/products')
       .then(res=>res.json())
       .then(json=>{
         setProductList(json.map(p => p))
