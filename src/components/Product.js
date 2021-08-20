@@ -2,7 +2,7 @@ import './product.css'
 
 const Product = (props) => {
 
-    const {id, title, price, description, category, image} = props.obj
+    const {id, title, price, description, category, image} = props.productObj
 
     return(
         <div className="product">

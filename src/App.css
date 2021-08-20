@@ -17,6 +17,16 @@ p {
   margin: 0;
 }
 
+.app {
+  width: 80vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+.form {
+  max-width: 600px;
+}
+
 .catalogue {
   /* display: flex; */
   max-width: 800px;
