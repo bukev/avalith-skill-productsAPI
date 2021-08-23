@@ -8,6 +8,16 @@ function App() {
 
   const [productList, setProductList] = useState([])
 
+  const newProduct = (product) => {
+    setProductList([
+      ...productList, 
+      {
+        id: productList.length + 1, 
+        ...product
+      }
+    ])
+  }
+
   useEffect(() => {
     fetch('https://fakestoreapi.com/products')
       .then(res=>res.json())
@@ -20,7 +30,7 @@ function App() {
   return (
     <div className="app">
 
-      <Form />
+      <Form newProduct={newProduct}/>
 
       <div className="catalogue">
       <h1>Catalogue</h1>
